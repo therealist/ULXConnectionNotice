@@ -2,7 +2,7 @@ function fuserAuthed( ply )
 	
 		for k,v in pairs( player.GetAll() ) do
 		
-			ULib.tsayError( v, ply:Nick() .. " has joined the server." )
+			ULib.tsayError( v, ply:Nick() .. " has joined the server. " .. table.Count(player.GetAll()) .. "/30" )
 			
 		end
 			
@@ -13,7 +13,7 @@ function fPlayerDisconnect( ply )
 
 		for k,v in pairs( player.GetAll() ) do
 		
-			ULib.tsayError( v, ply:Nick() .. " has left the server." )
+			ULib.tsayError( v, ply:Nick() .. " has left the server. " .. table.Count(player.GetAll()) .. "/30" )
 							
 		end
 			
